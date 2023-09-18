@@ -1,0 +1,10 @@
+@mixin media-max-width($width) {
+  @media screen and (max-width : $width) { @content; }
+}
+
+@mixin positioned($position: absolute, $left: 0, $top: 0){
+  position: $position;
+  left: $left;
+  top: $top;
+}
+

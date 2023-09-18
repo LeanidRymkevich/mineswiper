@@ -1,0 +1,130 @@
+.score {
+  width: 100vw;
+  height: 100vh;
+  @include positioned(fixed);
+  @extend %center-flex;
+  background-color: $game-end-surroud-back-color;
+  z-index: -1;
+  @extend %game-end-transition;
+}
+
+.score_opened {
+  z-index: 1;
+  opacity: 1;
+}
+
+
+.score__underlay{
+  width: 100%;
+  height: 100%;
+  @include positioned();
+  z-index: 1;
+  backdrop-filter: blur(2px);
+  @extend %game-end-transition;
+}
+
+.score_opened .score__underlay {
+  opacity: 1;
+}
+
+.score__content {
+  position: relative;
+  z-index: 2;
+  width: 40vh;
+  max-height: 80vh;
+  overflow: auto;
+  background-color: $score-content-back-color;
+  border-radius: 15px;
+  @extend %center-flex;
+  flex-direction: column;
+  padding: 10px 20px 20px 20px;
+  transform: scale(0);
+  transform-origin: 50%;
+  @extend %game-end-transition;
+}
+
+.score_opened .score__content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.score__title {
+  padding: 0;
+  margin: 0;
+  @extend %font;
+  color: $mute-btn-hover-color;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.score__button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border-radius: 50%;
+  border: 2px solid $btn-background-color;
+  background-color: $btn-background-color;
+  color: $ordinary-text-color;
+  font-style: normal;
+  font-size: 2rem;
+  font-family: revert;
+  transition: all .3s;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $ordinary-text-color;
+  }
+
+  &:active {
+    background-color: $ordinary-text-color;
+    color: $btn-text-color-active;
+    transition: all .1s;
+  }
+}
+
+
+.score__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.score__item,
+.score__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $background-zone;
+}
+
+.score__moves,
+.score__time,
+.score__number {
+  font-family: monospace;
+  color: $ordinary-text-color;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.score__moves {
+  width: 35%;
+  border-right: 2px solid $background-zone;
+}
+
+.score__time {
+  width: 50%;
+}
+
+.score__number {
+  width: 15%;
+  text-align: left;
+  border-right: 2px solid $background-zone;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper</title>
+  <link rel="icon" href="assets/img/Mine.png" type="image/png">
+  <link rel="stylesheet" href="scss/style.css">
+  <link data-theme="dark" rel="stylesheet" href="scss/dark-theme.css" disabled>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">Minesweeper</h1>
+    <div class="menu">
+      <button data-btn-func="theme change" class="button">Change to the light theme theme</button>
+      <button data-btn-func="show scores" class="button">Best scores</button>
+      <div class="game-options">
+        <div class="complexity">
+          <label class="complexity__label" for="level">Complexity</label>
+          <select class="complexity__select" id="level">
+            <option class="complexity__option" value="easy">Easy</option>
+            <option class="complexity__option" value="medium">Medium</option>
+            <option class="complexity__option" value="hard">Hard</option>
+          </select>
+        </div>
+        <div class="mines-number">
+          <label class="mines-number__label" for="mines-number__input">Mines number</label>
+          <input type="number" id="mines-number__input" class="mines-number__input" min="1" value="10">
+        </div>
+      </div>
+    </div>
+    <div class="results">
+      <div class="results__cell">
+        <h3 class="results__header">Remain bomb</h3>
+        <div class="results__bomb">0000</div>
+      </div>
+      <div class="results__cell">
+        <h3 class="results__header">Flags</h3>
+        <div class="results__flags">0000</div>
+      </div>
+      <div class="results__cell">
+        <button data-btn-func="restart game" class="button grid-item">Restart game</button>
+      </div>
+      <div class="results__cell">
+        <h3 class="results__header">Moves</h3>
+        <div class="results__moves">0000</div>
+      </div>
+      <div class="results__cell">
+        <h3 class="results__header">Time</h3>
+        <div class="results__time">00:00:00</div>
+      </div>
+    </div>
+    <div class="mine-field-container">
+    </div>
+  </div>
+
+  <!-- <script src="js/index.js" type="module"></script> -->
+</body>
+</html>

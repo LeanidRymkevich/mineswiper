@@ -1,0 +1,138 @@
+@import "abstract/variables";
+
+// _basics
+
+body {
+  background-color: $body-color-dark;
+}
+
+.title {
+  color: $ordinary-text-color-dark;
+}
+
+// _button
+
+.button {
+  border-color: $btn-background-color-dark;
+  background-color: $btn-background-color-dark;
+  color: $ordinary-text-color-dark;
+
+  &:hover {
+    border-color: $ordinary-text-color-dark;
+  }
+
+  &:active {
+    border-color: $ordinary-text-color-dark;
+    background-color: $ordinary-text-color-dark;
+  }
+}
+
+.mute-button {
+  .path {
+    fill: $ordinary-text-color-dark;
+  }
+
+  &:hover {
+    .path {
+      fill: $mute-btn-hover-color-dark;
+    }
+  }
+}
+
+// _menu
+
+.menu,
+.results {
+  border-color: $ordinary-text-color-dark;
+  background: $background-zone-dark;
+}
+
+.complexity__label,
+.mines-number__label,
+.results__header {
+  color: $ordinary-text-color-dark;
+}
+.complexity__select,
+.mines-number__input{
+  background-color: $form-background-color-dark;
+  color: $ordinary-text-color-dark;
+}
+
+// _results
+
+.results__moves,
+.results__time,
+.results__bomb,
+.results__flags {
+  color: $result-item-color-dark;
+  border-color: $ordinary-text-color-dark;
+  background-color: $btn-background-color-dark;
+}
+
+// _mine-field
+
+.mine-field {
+  background: $result-item-color-dark;
+}
+
+// _game-end-popup
+
+.game-end {
+  background-color: $game-end-surroud-back-color-dark;
+}
+
+.game-end__content {
+  background-color: $game-end-content-back-color-dark;
+}
+
+.game-end__title {
+  color: $ordinary-text-color-dark;
+}
+
+// score popup
+
+.score {
+  background-color: $game-end-surroud-back-color-dark;
+}
+
+.score__content {
+  background-color: $score-content-back-color-dark;
+}
+
+.score__title {
+  color: #69edcc;
+}
+
+.score__button {
+  border: 2px solid $btn-background-color-dark;
+  background-color: $btn-background-color-dark;
+  color: $ordinary-text-color-dark;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $ordinary-text-color-dark;
+  }
+
+  &:active {
+    background-color: $ordinary-text-color-dark;
+    color: $btn-text-color-active;
+  }
+}
+
+.score__item {
+  border-bottom: 2px solid $background-zone-dark;
+}
+
+.score__moves,
+.score__time,
+.score__number {
+  color: $ordinary-text-color-dark;
+}
+
+.score__moves {
+  border-right: 2px solid $background-zone-dark;
+}
+
+.score__number {
+  border-right: 2px solid $background-zone-dark;
+}

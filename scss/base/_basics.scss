@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: color .3s, background-color .3s;
+}
+
+html {
+  font-family: $font-family;
+  font-size: 10px;
+}
+
+body {
+  background-color: $body-color-light;
+}
+
+body._no-scroll {
+  overflow: hidden;
+  @media screen and (min-width: 1024px) {
+    padding-right: 16.8px; // compensation of laptop scroll width in Chrome
+  }
+}
+
+.container {
+  width: $container-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px auto;
+}
+
+.title {
+  font-size: 4rem;
+  font-style: italic;
+  color: $ordinary-text-color;
+}

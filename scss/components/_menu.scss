@@ -1,0 +1,31 @@
+.menu {
+  @extend %container;
+  gap: 15px 30px;
+}
+
+.game-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.complexity,
+.mines-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.complexity__label,
+.mines-number__label {
+  @extend %font;
+}
+.complexity__select,
+.mines-number__input{
+  width: 130px;
+  padding: 5px;
+  border: 1px solid;
+  background-color: $form-background-color;
+  @extend %font;
+  text-align: center;
+}

@@ -1,0 +1,54 @@
+.button {
+  padding: 5px 10px;
+  margin: 0;
+  height: 40px;
+  outline: none;
+  border-radius: 25px;
+  border: 1px solid $btn-background-color;
+  background-color: $btn-background-color;
+  white-space: nowrap;
+  @extend %font;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $ordinary-text-color;
+  }
+
+  &:active {
+    cursor: pointer;
+    border-color: $ordinary-text-color;
+    background-color: $ordinary-text-color;
+    color: $btn-text-color-active;
+    transition: all 0.1s;
+  }
+}
+
+.mute-button {
+  width: 40px;
+  height: 40px;
+  transition: all .3s ease-in-out;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  
+  svg {
+    width: 100%;
+  }
+
+  .path {
+    fill: $ordinary-text-color;
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .path {
+      fill: $mute-btn-hover-color;
+    }
+  }
+}
+
+
+

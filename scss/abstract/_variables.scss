@@ -1,0 +1,31 @@
+$container-width: 95vw;
+
+$font-family: Georgia, 'Times New Roman', Times, serif;
+
+// light theme
+
+$body-color-light: #f8f8ff;
+$btn-background-color: #cee2e2;
+$background-zone: #d3d3d3;
+$btn-text-color-active: #f5fffa;
+$ordinary-text-color: #008080;
+$mine-field-background-color: #ffffff;
+$form-background-color: #e4eeee;
+$result-item-color: #000000;
+$game-end-surroud-back-color: rgba(152,152,152, 0.39);
+$mute-btn-hover-color: #063a3a;
+$game-end-content-back-color: $body-color-light;
+$score-content-back-color: $game-end-content-back-color;
+
+// dark theme
+
+$body-color-dark: #555;
+$ordinary-text-color-dark: #0ac799;
+$btn-background-color-dark: #5d6167;
+$form-background-color-dark: #5d6167;
+$background-zone-dark: #778285;
+$result-item-color-dark: #e1e1e2;
+$game-end-surroud-back-color-dark: rgba(235, 232, 232, 0.39);
+$game-end-content-back-color-dark: #464646;
+$score-content-back-color-dark: $game-end-content-back-color-dark;
+$mute-btn-hover-color-dark: #147059;

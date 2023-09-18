@@ -1,0 +1,34 @@
+.results {
+  @extend %container;
+  gap: 10px 20px;
+}
+
+.results__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  @include media-max-width(628px) {
+    &:nth-child(3) {
+      order: 1;
+    }
+  }
+}
+
+.results__header {
+  @extend %font;
+}
+
+.results__moves,
+.results__time,
+.results__bomb,
+.results__flags {
+  font-family: monospace;
+  color: $result-item-color;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 5px;
+  border: 2px solid $ordinary-text-color;
+  background-color: $btn-background-color;
+}

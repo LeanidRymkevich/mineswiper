@@ -1,0 +1,90 @@
+.mine-field {
+  width: fit-content;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: $mine-field-background-color;
+}
+
+.mine-field__row {
+  @extend %center-flex;
+}
+
+.mine-field__cell {
+  border: 1px solid black;
+  @extend %center-flex;
+  font-size: 2rem;
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &_unopened{
+    background-color: rgb(157 155 155) !important;
+    border: 1px solid black;
+  }
+
+  &_bombed {
+    background-image: url("../assets/img/Mine.png");
+    background-size: 84%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+  }
+
+  &_flaged {
+    position: relative;
+    border: 1px solid black;
+
+    &:hover{
+      cursor: context-menu;
+    }
+
+    &::before {
+      width: 80%;
+      height: 80%;
+      position: absolute;
+      content: "";
+      background-image: url("../assets/img/flag.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &_opened {
+    background-color: transparent;
+    border: 1px solid black;
+  }
+
+  &[data-code = "1"]{
+    color: #008000;
+  }
+
+  &[data-code = "2"]{
+    color: #0000ff;
+  }
+
+  &[data-code = "3"]{
+    color: #ff0000;
+  }
+
+  &[data-code = "4"]{
+    color: #401d40;
+  }
+
+  &[data-code = "5"]{
+    color: #1a361f;
+  }
+
+  &[data-code = "6"]{
+    color: rgb(70, 33, 13);
+  }
+
+  &[data-code = "7"]{
+    color: rgb(22, 22, 39);
+  }
+
+  &[data-code = "8"]{
+    color: rgb(7, 7, 7);
+  }
+}

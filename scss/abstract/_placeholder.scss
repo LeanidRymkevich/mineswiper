@@ -1,0 +1,28 @@
+%font {
+  font-family: $font-family;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: $ordinary-text-color;
+}
+
+%container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid $ordinary-text-color;
+  border-radius: 10px;
+  background: $background-zone;
+}
+
+%center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%game-end-transition {
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
